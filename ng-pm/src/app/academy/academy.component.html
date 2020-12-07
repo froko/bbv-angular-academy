@@ -1,5 +1,14 @@
 <h2>Academy</h2>
 
+<div class="form-group row">
+  <div class="col-sm-10">
+    <select class="form-control" (change)="onChange($event.target.value)">
+      <option>Alle</option>
+      <option *ngFor="let category of categories$ | async">{{ category }}</option>
+    </select>
+  </div>
+</div>
+
 <div class="row">
   <div class="col-md-8" *ngFor="let course of courses$ | async">
     <bbv-academy-box [course]="course" (select)="navigateToCourseDetail($event)"></bbv-academy-box>

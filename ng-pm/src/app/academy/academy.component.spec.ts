@@ -11,7 +11,8 @@ describe('AcademyComponent', () => {
   const courses = [{ id: 1 }, { id: 2 }, { id: 3 }];
 
   const academyService = {
-    getAll: jest.fn()
+    getAll: jest.fn(),
+    getCategories: jest.fn()
   };
 
   let component: AcademyComponent;
